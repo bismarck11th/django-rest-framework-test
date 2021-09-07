@@ -1,6 +1,15 @@
+# ViewSet -> WebAPIの本体。
+# RestAPIのCRUD操作に対応する６種類のアクション（メソッド）が事前に用意されており、必要な部分をオーバーライドして使う。
+
+# ModelViewSet -> ViewSetの拡張クラス。
+# 特定のmodelを指定すると、modelのCRUD操作がViewSetのアクションとして暗黙的に実装される
+
 # ViewSet は MVC2 におけるコントローラーの役割を担うもの。
-# なお、ViewSet というのは DRF における名前であり、Django 的に言えば View です(ViewSet は View を継承しています)。
-# Model をどのようにシリアライズするかを決めるのは Serializer の役目です。
+# なお、ViewSet というのは DRF における名前であり、Django 的に言えば View です(ViewSet は View を継承)。
+# Model をどのようにシリアライズするかを決めるのは Serializer の役目。
+
+# queryset -> ソースとなるデータをクエリで指定
+# serializer_class -> シリアライザの指定
 
 from django.shortcuts import render
 from rest_framework import viewsets, filters

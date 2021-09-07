@@ -1,8 +1,14 @@
+# 「モデルを作る ≒ 管理画面を作る」(+ admin.py)
+# 「モデルを作る ≒ CRUD API を作る」(ModelViewSet + Serializer)
+
 from django.db import models
 
 
 # Create your models here.
 class User(models.Model):
+    """
+    ユーザーモデル
+    """
     name = models.CharField(max_length=32)
     mail = models.EmailField()
 
@@ -11,6 +17,9 @@ class User(models.Model):
 
 
 class Entry(models.Model):
+    """
+    記事モデル
+    """
     STATUS_DRAFT = "draft"
     STATUS_PUBLIC = "public"
     STATUS_SET = (

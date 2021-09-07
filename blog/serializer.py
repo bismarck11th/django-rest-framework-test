@@ -1,6 +1,8 @@
-# Serializer はModelとAPI のデータ(json なと)間での相互変換を受け持つものであり、
-# モデルを API のデータに変換したり、逆に API のデータをモデルに変換したりする。
-# Serializer とURL は関係ない。
+# Serializer -> オブジェクトとJSON(XML)間の変換ルールやバリデーション処理を定義する。
+
+# ModelSerializer -> Serializerの拡張クラス。
+# 特定のmodelを指定すると、modelのフィールド設定が、Serializerのフィールド設定として暗黙的に実装される
+
 
 from rest_framework import serializers
 

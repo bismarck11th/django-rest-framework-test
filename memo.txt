@@ -1,0 +1,14 @@
+[ リクエスト処理の流れ ]
+1 Web Server
+2 Web Server Gateway Interface
+3 urlpatterns -> プロジェクトのurls.py
+4 Router      -> アプリのurls.py
+5 ViewSet(view.py) + Serializer(serializers.py)
+6 Model(models.py)
+7 DB
+
+[基本的な作業手順]
+1 プロジェクトを構成する (django-admin startproject ~ -> python manage.py startapp ~)
+2 modelを定義し、データベースに反映する (python manage.py mikemigrations -> migrate)
+3 modelを元にModelSerializer、ModelViewSetを作成し、urlpatterns、Router、を設定して基本動作を確認する
+4 要件に合わせる形でModelSerializerとModelViewSetをカスタマイズする
